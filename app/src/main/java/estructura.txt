@@ -1,0 +1,51 @@
+Listado de rutas de carpetas
+El n·mero de serie del volumen es 5C84-1327
+C:.
+|   estructura.txt
+|   
+\---com
+    \---dapm
+        \---barbershop
+            |   BarbershopApplication.kt
+            |   MainActivity.kt
+            |   
+            +---application
+            |   \---usecases
+            |           CustomerRegisterUserCase.kt
+            |           LoginUseCase.kt
+            |           
+            +---domain
+            |   +---entities
+            |   |       User.kt
+            |   |       
+            |   +---enums
+            |   |       EnumRol.kt
+            |   |       
+            |   \---ports
+            |           AuthenticationRepository.kt
+            |           
+            \---infrastructure
+                +---adapters
+                |       FirebaseAuthenticationRepository.kt
+                |       
+                +---dtos
+                |       UserDto.kt
+                |       
+                +---exceptions
+                |       AuthenticationException.kt
+                |       
+                +---modules
+                |       AppModule.kt
+                |       
+                \---ui
+                    +---fragments
+                    |       AdminMenuFragment.kt
+                    |       CustomerMenuFragment.kt
+                    |       CustomerRegisterFragment.kt
+                    |       LoginFragment.kt
+                    |       
+                    \---viewmodels
+                            CustomerRegisterViewModel.kt
+                            LoginViewModel.kt
+                            SharedViewModel.kt
+                            

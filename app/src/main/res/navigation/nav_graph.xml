@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminMenuFragment"
+            app:destination="@id/adminMenuFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_customerMenuFragment"
+            app:destination="@id/customerMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.CustomerRegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action android:id="@+id/action_registerFragment_to_customerMenuFragment"
+            app:destination="@id/customerMenuFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/customerMenuFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.CustomerMenuFragment"
+        android:label="CustomerMenuFragment"
+        tools:layout="@layout/fragment_menu_user">
+        <action android:id="@+id/action_customerMenuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminMenuFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.AdminMenuFragment"
+        android:label="AdminMenuFragment"
+        tools:layout="@layout/fragment_admin_menu">
+        <action
+            android:id="@+id/action_adminMenuFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_adminMenuFragment_to_adminBarberListFragment"
+            app:destination="@id/adminBarberListFragment" />
+        <action
+            android:id="@+id/action_adminMenuFragment_to_adminBarbershopListFragment"
+            app:destination="@id/adminBarbershopListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminBarberListFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.admin.BarberListFragment"
+        android:label="AdminBarberListFragment"
+        tools:layout="@layout/fragment_admin_barber_list">
+        <action
+            android:id="@+id/action_adminBarberListFragment_to_adminMenuFragment"
+            app:destination="@id/adminMenuFragment" />
+
+        <action
+            android:id="@+id/action_adminMenuFragment_to_adminBarberFragment"
+            app:destination="@id/adminBarberFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminBarbershopListFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.admin.BarbershopListFragment"
+        android:label="AdminBarbershopListFragment"
+        tools:layout="@layout/fragment_admin_barbershop_list">
+        <action
+            android:id="@+id/action_adminBarbershopListFragment_to_adminMenuFragment"
+            app:destination="@id/adminMenuFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminBarberFragment"
+        android:name="com.dapm.barbershop.infrastructure.ui.fragments.admin.BarberFragment"
+        android:label="AdminBarberFragment"
+        tools:layout="@layout/fragment_admin_barber">
+    </fragment>
+
+</navigation>

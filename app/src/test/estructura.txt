@@ -1,0 +1,11 @@
+Listado de rutas de carpetas
+El n·mero de serie del volumen es 5C84-1327
+C:.
+|   estructura.txt
+|   
+\---java
+    \---com
+        \---dapm
+            \---barbershop
+                    ExampleUnitTest.kt
+                    
